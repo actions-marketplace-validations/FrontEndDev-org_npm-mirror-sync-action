@@ -1,0 +1,25 @@
+name: npm mirror sync action
+author: 云淡然 <hi@ydr.me> (https://ydr.me)
+description: 🔄 Synchronize newly released npm package to npm mirror, support npmmirror.com
+
+inputs:
+  name:
+    description: The name of the package to be synchronized. By default, the value of the name attribute is obtained from the current directory package.json
+    required: false
+  target:
+    description: npm 镜像，默认 npmmirror（即 npmmirror.com）
+    default: npmmirror
+    required: false
+  timeout:
+    description: Synchronization timeout, default 10 seconds, unit second
+    default: '10'
+    required: false
+
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: 'refresh-cw'
+  color: 'purple'
+
+runs:
+  using: node16
+  main: dist/index.cjs
