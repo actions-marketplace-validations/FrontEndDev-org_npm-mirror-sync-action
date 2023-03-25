@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts && tsc --project tsconfig.json --noEmit",
+    "test": "echo '未实现'",
     "build": "rm -rf dist && rollup --config"
   },
   "engines": {
