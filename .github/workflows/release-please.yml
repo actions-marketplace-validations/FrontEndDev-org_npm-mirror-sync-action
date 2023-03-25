@@ -8,8 +8,24 @@ on:
       - v*.x
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-nvm
+      - run: npm ci
+      - run: npm run build
+      - uses: peter-evans/create-pull-request@v4
+        id: pr
+        with:
+          delete-branch: true
+          title: dist pr
+          body: dist pr
+      - run: gh pr merge ${{ steps.pr.outputs.pull-request-number }} --merge --auto
+
   release:
     runs-on: ubuntu-latest
+    needs: build
     permissions:
       contents: write
       pull-requests: write
@@ -18,17 +34,6 @@ jobs:
       major: ${{ steps.release.outputs.major }}
       minor: ${{ steps.release.outputs.minor }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-nvm
-      - run: npm ci
-      - run: npm run build
-      - name: commit and push dist
-        run: |
-          git config user.name ${{ github.actor }}
-          git config user.email ${{ github.actor }}@users.noreply.github.com
-          git add --all
-          git commit --all --verbose --status --message "chore: build dist"
-          git push --verbose
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
