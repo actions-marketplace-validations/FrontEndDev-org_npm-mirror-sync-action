@@ -18,6 +18,7 @@ jobs:
       - uses: peter-evans/create-pull-request@v4
         id: pr
         with:
+          commit-message: 'chore: build dist'
           delete-branch: true
           title: dist pr
           body: dist pr
