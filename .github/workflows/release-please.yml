@@ -20,9 +20,11 @@ jobs:
         with:
           commit-message: 'chore: build dist'
           delete-branch: true
-          title: dist pr
-          body: dist pr
+          title: 机器人自动创建的构建内容 pr，将会自动合并
+          body: 机器人自动创建的构建内容 pr，将会自动合并
       - run: gh pr merge ${{ steps.pr.outputs.pull-request-number }} --merge --auto
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   release:
     runs-on: ubuntu-latest
