@@ -4,7 +4,7 @@
 [![dependency-review](https://github.com/FrontEndDev-org/npm-mirror-sync-action/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/FrontEndDev-org/npm-mirror-sync-action/actions/workflows/dependency-review.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e2124e485dbd406a9dd2678e69822a55)](https://app.codacy.com/gh/FrontEndDev-org/npm-mirror-sync-action/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![release](https://img.shields.io/github/v/release/FrontEndDev-org/npm-mirror-sync-action)
-[![marketplace](https://img.shields.io/badge/marketplace-publish--node--package--action-blueviolet)](https://github.com/marketplace/actions/npm-mirror-sync-action)
+[![marketplace](https://img.shields.io/badge/marketplace-npm--mirror--sync--action-blueviolet)](https://github.com/marketplace/actions/npm-mirror-sync-action)
 ![license](https://img.shields.io/github/license/FrontEndDev-org/npm-mirror-sync-action)
 
 🔄 将 npm 包新版本同步到 npm 镜像，支持 npmmirror.com
