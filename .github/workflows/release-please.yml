@@ -24,8 +24,8 @@ jobs:
       - run: npm run build
       - name: commit and push dist
         run: |
-          git commit --all --verbose --status --message "chore: build dist" 2> /dev/null || true
-          git push --verbose 2> /dev/null || true
+          git commit --all --verbose --status --message "chore: build dist"
+          git push --verbose
       - uses: google-github-actions/release-please-action@v3
         id: release
         with:
