@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/node-env
+      - uses: ./.github/actions/setup-nvm
       - run: npm ci
       - run: npm run lint
 
@@ -24,6 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/node-env
+      - uses: ./.github/actions/setup-nvm
       - run: npm ci
       - run: npm run test
