@@ -1,0 +1,45 @@
+{
+  "name": "npm-mirror-sync-action",
+  "version": "1.0.0",
+  "description": "将 npm 包新版本同步到 npm 镜像，支持 npmmirror.com",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint src/**/*.ts && tsc --project tsconfig.json --noEmit",
+    "test": "echo '未实现'",
+    "build": "rm -rf dist && rollup --config"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "author": "云淡然 <hi@ydr.me> (https://ydr.me)",
+  "homepage": "https://github.com/FrontEndDev-org/npm-mirror-sync-action",
+  "repository": "https://github.com/FrontEndDev-org/npm-mirror-sync-action",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/types": "^17.4.4",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^18.15.3",
+    "@types/prettier": "^2.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-define-config": "^1.17.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4",
+    "rollup": "^3.20.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "axios": "^1.3.4"
+  }
+}

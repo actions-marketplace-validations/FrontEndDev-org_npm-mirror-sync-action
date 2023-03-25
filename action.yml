@@ -1,0 +1,25 @@
+name: npm mirror sync action
+author: 云淡然 <hi@ydr.me> (https://ydr.me)
+description: 🔄 将 npm 包新版本同步到 npm 镜像，支持 npmmirror.com
+
+inputs:
+  name:
+    description: 待同步的 npm 包名称，默认从当前目录 package.json 里读取
+    required: false
+  target:
+    description: 同步镜像的目标，默认 npmmirror（即 npmmirror.com），暂无其他可选值
+    default: npmmirror
+    required: false
+  timeout:
+    description: 同步超时时间，默认 30 秒
+    default: '30'
+    required: false
+
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: 'refresh-cw'
+  color: 'purple'
+
+runs:
+  using: node16
+  main: dist/index.cjs
