@@ -24,6 +24,8 @@ jobs:
       - run: npm run build
       - name: commit and push dist
         run: |
+          git config user.name ${{ github.actor }}
+          git config user.email ${{ github.actor }}@users.noreply.github.com
           git commit --all --verbose --status --message "chore: build dist"
           git push --verbose
       - uses: google-github-actions/release-please-action@v3
