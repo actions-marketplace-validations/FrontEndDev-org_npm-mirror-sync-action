@@ -1,7 +1,7 @@
 {
   "name": "npm-mirror-sync-action",
   "version": "1.0.0",
-  "description": "Synchronize newly released npm package to npm mirror, support npmmirror.com",
+  "description": "将 npm 包新版本同步到 npm 镜像，支持 npmmirror.com",
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts && tsc --project tsconfig.json --noEmit",
