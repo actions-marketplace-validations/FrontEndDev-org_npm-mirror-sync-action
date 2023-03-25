@@ -9,21 +9,22 @@
 
 🔄 将 npm 包新版本同步到 npm 镜像，支持 npmmirror.com
 
-# 工作流配置
+# 工作流样例
 
 ```yaml
 jobs:
   release:
     runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
-          - run: npm ci
-          - run: npm run build
-          - uses: FrontEndDev-org/publish-node-package-action@v1
-            with:
-              target: npm
-              token: ${{ secrets.NPM_TOKEN }}
-          - name: 自动将上一步发布的的 npm 包版本同步到 npmmirror.com
-            uses: FrontEndDev-org/npm-mirror-sync-action@v1
+      - run: npm ci
+      - run: npm run build
+      - uses: FrontEndDev-org/publish-node-package-action@v1
+        with:
+          target: npm
+          token: ${{ secrets.NPM_TOKEN }}
+      - name: 自动将上一步发布的的 npm 包版本同步到 npmmirror.com
+        uses: FrontEndDev-org/npm-mirror-sync-action@v1
 ```
 
 # 配置项
