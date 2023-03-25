@@ -24,6 +24,7 @@ jobs:
           title: 机器人自动创建的拉取请求，将会自动合并，请勿手动处理！
           body: 机器人自动创建的拉取请求，将会自动合并，请勿手动处理！
       - run: gh pr merge ${{ steps.pr.outputs.pull-request-number }} --merge --auto --delete-branch
+        if: ${{ steps.pr.outputs.pull-request-number }}
         env:
           GH_TOKEN: ${{ github.token }}
 
