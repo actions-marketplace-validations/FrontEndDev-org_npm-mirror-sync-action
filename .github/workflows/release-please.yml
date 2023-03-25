@@ -18,11 +18,12 @@ jobs:
       - uses: peter-evans/create-pull-request@v4
         id: pr
         with:
+          committer: github-actions[bot] <github-actions-bot@users.noreply.github.com>
+          author: github-actions[bot] <github-actions-bot@users.noreply.github.com>
           commit-message: 'chore: build dist'
-          delete-branch: true
-          title: 机器人自动创建的构建内容 pr，将会自动合并
-          body: 机器人自动创建的构建内容 pr，将会自动合并
-      - run: gh pr merge ${{ steps.pr.outputs.pull-request-number }} --merge --auto
+          title: 机器人自动创建的拉取请求，将会自动合并，请勿手动处理！
+          body: 机器人自动创建的拉取请求，将会自动合并，请勿手动处理！
+      - run: gh pr merge ${{ steps.pr.outputs.pull-request-number }} --merge --auto --delete-branch
         env:
           GH_TOKEN: ${{ github.token }}
 
