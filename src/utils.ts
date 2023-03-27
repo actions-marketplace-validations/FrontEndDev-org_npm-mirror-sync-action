@@ -16,5 +16,8 @@ export function nsLogger(ns: string) {
     error(message: string) {
       core.error(toNsMessage(message));
     },
+    debug(message: string) {
+      core.debug(toNsMessage(message));
+    },
   };
 }
