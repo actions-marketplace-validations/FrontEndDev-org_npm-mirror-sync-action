@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/FrontEndDev-org/npm-mirror-sync-action/compare/v1.0.0...v1.1.0) (2023-03-27)
+
+
+### Features
+
+* 优化同步日志 ([780b21a](https://github.com/FrontEndDev-org/npm-mirror-sync-action/commit/780b21af691fd5f968ed17ac56d3e057fad53ba4))
+
 ## 1.0.0 (2023-03-25)
 
 
