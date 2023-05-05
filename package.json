@@ -16,7 +16,7 @@
   "repository": "https://github.com/FrontEndDev-org/npm-mirror-sync-action",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
+    "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/types": "^17.4.4",
     "@rollup/plugin-commonjs": "^24.0.1",
